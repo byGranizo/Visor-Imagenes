@@ -20,11 +20,22 @@ namespace Visor_Imagenes
             if (ofdImagenes.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            foreach(string imagen in ofdImagenes.FileNames)
+            foreach (string imagen in ofdImagenes.FileNames)
                 v.Agregar_Foto((Bitmap)Bitmap.FromFile(imagen));
+            
 
             pbImagenes.Image = v.Foto_Actual();
-        
+            
+        }
+
+        private void btAnt_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.Prev_Foto();
+        }
+
+        private void btSig_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.Next_Foto();
         }
     }
 }
