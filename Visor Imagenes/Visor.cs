@@ -25,6 +25,11 @@ namespace Visor_Imagenes
             
 
             pbImagenes.Image = v.Foto_Actual();
+
+            btAnt.Enabled = true;
+            btSig.Enabled = true;
+            btRotIzda.Enabled = true;
+            btRotDcha.Enabled = true;
             
         }
 
@@ -36,6 +41,16 @@ namespace Visor_Imagenes
         private void btSig_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Next_Foto();
+        }
+
+        private void btRotIzda_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.rotar_antihor();
+        }
+
+        private void btRotDcha_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.rotar_hor();
         }
     }
 }

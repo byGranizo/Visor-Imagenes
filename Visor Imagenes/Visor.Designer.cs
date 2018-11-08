@@ -33,6 +33,8 @@
             this.ofdImagenes = new System.Windows.Forms.OpenFileDialog();
             this.btAnt = new System.Windows.Forms.Button();
             this.btSig = new System.Windows.Forms.Button();
+            this.btRotIzda = new System.Windows.Forms.Button();
+            this.btRotDcha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +65,7 @@
             // 
             // btAnt
             // 
+            this.btAnt.Enabled = false;
             this.btAnt.Location = new System.Drawing.Point(217, 510);
             this.btAnt.Name = "btAnt";
             this.btAnt.Size = new System.Drawing.Size(75, 23);
@@ -73,7 +76,8 @@
             // 
             // btSig
             // 
-            this.btSig.Location = new System.Drawing.Point(408, 510);
+            this.btSig.Enabled = false;
+            this.btSig.Location = new System.Drawing.Point(298, 510);
             this.btSig.Name = "btSig";
             this.btSig.Size = new System.Drawing.Size(75, 23);
             this.btSig.TabIndex = 3;
@@ -81,11 +85,35 @@
             this.btSig.UseVisualStyleBackColor = true;
             this.btSig.Click += new System.EventHandler(this.btSig_Click);
             // 
+            // btRotIzda
+            // 
+            this.btRotIzda.Enabled = false;
+            this.btRotIzda.Location = new System.Drawing.Point(461, 510);
+            this.btRotIzda.Name = "btRotIzda";
+            this.btRotIzda.Size = new System.Drawing.Size(75, 23);
+            this.btRotIzda.TabIndex = 4;
+            this.btRotIzda.Text = "90º Izda";
+            this.btRotIzda.UseVisualStyleBackColor = true;
+            this.btRotIzda.Click += new System.EventHandler(this.btRotIzda_Click);
+            // 
+            // btRotDcha
+            // 
+            this.btRotDcha.Enabled = false;
+            this.btRotDcha.Location = new System.Drawing.Point(543, 510);
+            this.btRotDcha.Name = "btRotDcha";
+            this.btRotDcha.Size = new System.Drawing.Size(75, 23);
+            this.btRotDcha.TabIndex = 5;
+            this.btRotDcha.Text = "90º Dcha";
+            this.btRotDcha.UseVisualStyleBackColor = true;
+            this.btRotDcha.Click += new System.EventHandler(this.btRotDcha_Click);
+            // 
             // Visor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 569);
+            this.Controls.Add(this.btRotDcha);
+            this.Controls.Add(this.btRotIzda);
             this.Controls.Add(this.btSig);
             this.Controls.Add(this.btAnt);
             this.Controls.Add(this.btAbrir);
@@ -104,6 +132,8 @@
         private System.Windows.Forms.OpenFileDialog ofdImagenes;
         private System.Windows.Forms.Button btAnt;
         private System.Windows.Forms.Button btSig;
+        private System.Windows.Forms.Button btRotIzda;
+        private System.Windows.Forms.Button btRotDcha;
     }
 }
 
