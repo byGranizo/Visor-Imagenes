@@ -35,6 +35,8 @@
             this.btSig = new System.Windows.Forms.Button();
             this.btRotIzda = new System.Windows.Forms.Button();
             this.btRotDcha = new System.Windows.Forms.Button();
+            this.btMas = new System.Windows.Forms.Button();
+            this.btMenos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             // btAnt
             // 
             this.btAnt.Enabled = false;
-            this.btAnt.Location = new System.Drawing.Point(217, 510);
+            this.btAnt.Location = new System.Drawing.Point(59, 510);
             this.btAnt.Name = "btAnt";
             this.btAnt.Size = new System.Drawing.Size(75, 23);
             this.btAnt.TabIndex = 2;
@@ -77,7 +79,7 @@
             // btSig
             // 
             this.btSig.Enabled = false;
-            this.btSig.Location = new System.Drawing.Point(298, 510);
+            this.btSig.Location = new System.Drawing.Point(140, 510);
             this.btSig.Name = "btSig";
             this.btSig.Size = new System.Drawing.Size(75, 23);
             this.btSig.TabIndex = 3;
@@ -88,7 +90,7 @@
             // btRotIzda
             // 
             this.btRotIzda.Enabled = false;
-            this.btRotIzda.Location = new System.Drawing.Point(461, 510);
+            this.btRotIzda.Location = new System.Drawing.Point(295, 510);
             this.btRotIzda.Name = "btRotIzda";
             this.btRotIzda.Size = new System.Drawing.Size(75, 23);
             this.btRotIzda.TabIndex = 4;
@@ -99,7 +101,7 @@
             // btRotDcha
             // 
             this.btRotDcha.Enabled = false;
-            this.btRotDcha.Location = new System.Drawing.Point(543, 510);
+            this.btRotDcha.Location = new System.Drawing.Point(376, 510);
             this.btRotDcha.Name = "btRotDcha";
             this.btRotDcha.Size = new System.Drawing.Size(75, 23);
             this.btRotDcha.TabIndex = 5;
@@ -107,11 +109,35 @@
             this.btRotDcha.UseVisualStyleBackColor = true;
             this.btRotDcha.Click += new System.EventHandler(this.btRotDcha_Click);
             // 
+            // btMas
+            // 
+            this.btMas.Enabled = false;
+            this.btMas.Location = new System.Drawing.Point(538, 510);
+            this.btMas.Name = "btMas";
+            this.btMas.Size = new System.Drawing.Size(75, 23);
+            this.btMas.TabIndex = 6;
+            this.btMas.Text = "+";
+            this.btMas.UseVisualStyleBackColor = true;
+            this.btMas.Click += new System.EventHandler(this.btMas_Click);
+            // 
+            // btMenos
+            // 
+            this.btMenos.Enabled = false;
+            this.btMenos.Location = new System.Drawing.Point(620, 510);
+            this.btMenos.Name = "btMenos";
+            this.btMenos.Size = new System.Drawing.Size(75, 23);
+            this.btMenos.TabIndex = 7;
+            this.btMenos.Text = "-";
+            this.btMenos.UseVisualStyleBackColor = true;
+            this.btMenos.Click += new System.EventHandler(this.btMenos_Click);
+            // 
             // Visor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 569);
+            this.Controls.Add(this.btMenos);
+            this.Controls.Add(this.btMas);
             this.Controls.Add(this.btRotDcha);
             this.Controls.Add(this.btRotIzda);
             this.Controls.Add(this.btSig);
@@ -134,6 +160,8 @@
         private System.Windows.Forms.Button btSig;
         private System.Windows.Forms.Button btRotIzda;
         private System.Windows.Forms.Button btRotDcha;
+        private System.Windows.Forms.Button btMas;
+        private System.Windows.Forms.Button btMenos;
     }
 }
 

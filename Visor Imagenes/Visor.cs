@@ -30,6 +30,8 @@ namespace Visor_Imagenes
             btSig.Enabled = true;
             btRotIzda.Enabled = true;
             btRotDcha.Enabled = true;
+            btMas.Enabled = true;
+            btMenos.Enabled = true;
             
         }
 
@@ -51,6 +53,16 @@ namespace Visor_Imagenes
         private void btRotDcha_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.rotar_hor();
+        }
+
+        private void btMas_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.Zoom(1.1f);
+        }
+
+        private void btMenos_Click(object sender, System.EventArgs e)
+        {
+            pbImagenes.Image = v.Zoom(0.9f);
         }
     }
 }
