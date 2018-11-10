@@ -48,6 +48,10 @@
             this.pbImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagenes.TabIndex = 0;
             this.pbImagenes.TabStop = false;
+            this.pbImagenes.DoubleClick += new System.EventHandler(this.btMas_Click);
+            this.pbImagenes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbImagenes_MouseDown);
+            this.pbImagenes.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbImagenes_MouseMove);
+            this.pbImagenes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbImagenes_MouseUp);
             // 
             // btAbrir
             // 

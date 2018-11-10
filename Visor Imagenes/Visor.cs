@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 using Visor;
@@ -10,9 +11,12 @@ namespace Visor_Imagenes
         static int anchoVisor = 640;
         static int altoVisor = 360;
         VisorFoto v = new VisorFoto(anchoVisor, altoVisor);
+        bool arrastrando;
+        Point offset;
         public Visor()
         {
             InitializeComponent();
+            arrastrando = false;
         }
 
         private void btAbrir_Click(object sender, System.EventArgs e)
@@ -63,6 +67,25 @@ namespace Visor_Imagenes
         private void btMenos_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Zoom(0.9f);
+        }
+
+        private void pbImagenes_MouseDown(object sender, MouseEventArgs e)
+        {
+            arrastrando = true;
+            offset = e.Location;
+        }
+
+        private void pbImagenes_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (arrastrando)
+            {
+                pbImagenes.Image = v.Despl(pbImagenes.Location.X + e.X - offset.X, pbImagenes.Location.Y + e.Y - offset.Y);
+            }
+        }
+
+        private void pbImagenes_MouseUp(object sender, MouseEventArgs e)
+        {
+            arrastrando = false;
         }
     }
 }
