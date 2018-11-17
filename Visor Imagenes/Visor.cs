@@ -10,8 +10,11 @@ namespace Visor_Imagenes
     {
         static int anchoVisor = 640;
         static int altoVisor = 360;
+
         VisorFoto v = new VisorFoto(anchoVisor, altoVisor);
+
         bool arrastrando;
+        float zoom = 1;
         Point offset;
         public Visor()
         {
@@ -30,23 +33,30 @@ namespace Visor_Imagenes
 
             pbImagenes.Image = v.Foto_Actual();
 
+            Console.WriteLine(v.Num_Actual);
+
             btAnt.Enabled = true;
             btSig.Enabled = true;
             btRotIzda.Enabled = true;
             btRotDcha.Enabled = true;
             btMas.Enabled = true;
             btMenos.Enabled = true;
-            
+
+            setMiniaturas();
+
+
         }
 
         private void btAnt_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Prev_Foto();
+            setMiniaturas();
         }
 
         private void btSig_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Next_Foto();
+            setMiniaturas();
         }
 
         private void btRotIzda_Click(object sender, System.EventArgs e)
@@ -62,11 +72,13 @@ namespace Visor_Imagenes
         private void btMas_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Zoom(1.1f);
+            zoom = zoom * 1.1f;
         }
 
         private void btMenos_Click(object sender, System.EventArgs e)
         {
             pbImagenes.Image = v.Zoom(0.9f);
+            zoom = zoom * 0.9f;
         }
 
         private void pbImagenes_MouseDown(object sender, MouseEventArgs e)
@@ -86,6 +98,28 @@ namespace Visor_Imagenes
         private void pbImagenes_MouseUp(object sender, MouseEventArgs e)
         {
             arrastrando = false;
+        }
+
+        private void setMiniaturas()
+        {
+            int numPrev;
+            int numNext;
+
+            if (v.Num_Actual == 0) {
+                numPrev = v.Num_Fotos - 1;
+            } else {
+                numPrev = v.Num_Actual - 1;
+            }
+
+            if (v.Num_Actual == v.Num_Fotos - 1) {
+                numNext = 0;
+            } else {
+                numNext = v.Num_Actual + 1;
+            }
+            
+
+            pbPrev.Image = v.Miniatura(numPrev, 150, 84);
+            pbNext.Image = v.Miniatura(numNext, 150, 84);
         }
     }
 }
