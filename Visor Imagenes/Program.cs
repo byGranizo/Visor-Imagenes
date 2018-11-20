@@ -16,7 +16,7 @@ namespace Visor_Imagenes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Visor());
+            Application.Run(new VisorImg());
         }
     }
 }

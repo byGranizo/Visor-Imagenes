@@ -2,21 +2,21 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-using Visor;
+using Visor2;
 
 namespace Visor_Imagenes
 {
-    public partial class Visor : Form
+    public partial class VisorImg : Form
     {
         static int anchoVisor = 640;
         static int altoVisor = 360;
 
-        VisorFoto v = new VisorFoto(anchoVisor, altoVisor);
+        Visor v = new Visor(anchoVisor, altoVisor);
 
         bool arrastrando;
         float zoom = 1;
         Point offset;
-        public Visor()
+        public VisorImg()
         {
             InitializeComponent();
             arrastrando = false;
@@ -28,7 +28,7 @@ namespace Visor_Imagenes
                 return;
 
             foreach (string imagen in ofdImagenes.FileNames)
-                v.Agregar_Foto((Bitmap)Bitmap.FromFile(imagen));
+                v.Agregar_Foto(imagen);
             
 
             pbImagenes.Image = v.Foto_Actual();
@@ -106,12 +106,12 @@ namespace Visor_Imagenes
             int numNext;
 
             if (v.Num_Actual == 0) {
-                numPrev = v.Num_Fotos - 1;
+                numPrev = v.Num_Fotos() - 1;
             } else {
                 numPrev = v.Num_Actual - 1;
             }
 
-            if (v.Num_Actual == v.Num_Fotos - 1) {
+            if (v.Num_Actual == v.Num_Fotos() - 1) {
                 numNext = 0;
             } else {
                 numNext = v.Num_Actual + 1;

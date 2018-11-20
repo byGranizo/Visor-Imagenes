@@ -1,6 +1,6 @@
 ﻿namespace Visor_Imagenes
 {
-    partial class Visor
+    partial class VisorImg
     {
         /// <summary>
         /// Required designer variable.
