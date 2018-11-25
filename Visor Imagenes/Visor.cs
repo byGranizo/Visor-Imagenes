@@ -16,6 +16,9 @@ namespace Visor_Imagenes
         bool arrastrando;
         float zoom = 1;
         Point offset;
+
+        int anchoMiniatura = 150;
+        int altoMiniatura = 84;
         public VisorImg()
         {
             InitializeComponent();
@@ -118,18 +121,13 @@ namespace Visor_Imagenes
             }
             
 
-            pbPrev.Image = v.Miniatura(numPrev, 150, 84);
-            pbNext.Image = v.Miniatura(numNext, 150, 84);
+            pbPrev.Image = v.Miniatura(numPrev, anchoMiniatura, altoMiniatura);
+            pbNext.Image = v.Miniatura(numNext, anchoMiniatura, altoMiniatura);
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void VisorImg_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -249,10 +249,11 @@
             this.Controls.Add(this.pbPrev);
             this.Controls.Add(this.pbImagenes);
             this.Controls.Add(this.msMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.msMenu;
+            this.MaximizeBox = false;
             this.Name = "VisorImg";
             this.Text = "Visor";
-            this.Load += new System.EventHandler(this.VisorImg_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.tsBarraHerramientas.ResumeLayout(false);
