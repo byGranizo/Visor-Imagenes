@@ -121,5 +121,15 @@ namespace Visor_Imagenes
             pbPrev.Image = v.Miniatura(numPrev, 150, 84);
             pbNext.Image = v.Miniatura(numNext, 150, 84);
         }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void VisorImg_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

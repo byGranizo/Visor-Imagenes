@@ -68,6 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,6 +82,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-hacia-la-izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar-flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-abrir-archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deshacer-flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-derecha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-hacia-la-izquierda1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signo-mas-en-un-circulo-negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
